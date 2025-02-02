@@ -24,7 +24,9 @@ INSTALLED_APPS = [
     'allauth.account',  # Add account management functionality
     'allauth.socialaccount',  # Add social account management
     'allauth.socialaccount.providers.google',  # Google sign-in provider
-    'pets'
+    'pets',
+    'tailwind',
+    'theme',
 ]
 
 MIDDLEWARE = [
@@ -35,6 +37,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware'
 ]
 
 ROOT_URLCONF = 'pet_care.urls'
@@ -61,9 +64,9 @@ WSGI_APPLICATION = 'pet_care.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pet_care_db',  # Your database name
-        'USER': 'your_mysql_user',  # Your MySQL username
-        'PASSWORD': 'your_mysql_password',  # Your MySQL password
+        'NAME': 'petcare',  # Your database name
+        'USER': 'root',  # Your MySQL username
+        'PASSWORD': '',  # Your MySQL password
         'HOST': 'localhost',  # Set to 'localhost' if MySQL is local
         'PORT': '3306',  # Default MySQL port
     }
@@ -111,3 +114,4 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '<YOUR_GOOGLE_CLIENT_ID>'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '<YOUR_GOOGLE_CLIENT_SECRET>'
 
 # For security reasons, do not store sensitive keys in code. You can use environment variables or a .env file instead.
+TAILWIND_APP_NAME = 'theme'
