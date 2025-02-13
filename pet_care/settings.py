@@ -26,7 +26,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',  # Google sign-in provider
     'pets',
     'tailwind',
-    'theme',
+    # 'theme',
 ]
 
 MIDDLEWARE = [
@@ -66,7 +66,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'petcare',  # Your database name
         'USER': 'root',  # Your MySQL username
-        'PASSWORD': '',  # Your MySQL password
+        'PASSWORD': 'Omkar@2007',  # Your MySQL password
         'HOST': 'localhost',  # Set to 'localhost' if MySQL is local
         'PORT': '3306',  # Default MySQL port
     }
